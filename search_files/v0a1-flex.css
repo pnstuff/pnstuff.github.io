@@ -1,0 +1,110 @@
+/**
+ Flex layout. Media queries collapse layout on smaller screens.
+
+ Classes:
+   vbw = video box wrapper
+   vb = video box
+   cbw = comm. box  wrapper
+   cb = comm. box
+   // todo inner-wrapper can probably be article
+ */
+
+@media (max-width: 940px) {
+
+    .inner-wrapper {
+        flex-direction: column;
+    }
+
+    .cbw {
+        order: 0;
+    }
+
+    .vbw {
+        order: 1;
+    }
+
+}
+
+@media (min-width: 941px) {
+    .cbw {
+        order: 1;
+    }
+
+    .vbw {
+        order: 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wrapper header, article, footer {
+    border: 1px #ccc solid;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+article {
+    flex: 5;
+}
+
+footer {
+    min-height: 50px;
+}
+
+.inner-wrapper {
+    display: flex;
+    border: 1px #ccc solid;
+    background-color: pink;
+    justify-content: center;
+}
+
+.vbw {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: #444;
+}
+
+.cbw {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+    background-color: #aaa;
+}
+
+
+.vb {
+    display: flex;
+    border: 1px #ccc solid;
+    height: 130px;
+    width: 190px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cb {
+    display: flex;
+    height: 260px;
+    width: 310px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    background-color: orangered;
+    align-items: center;
+    justify-content: center;
+}
